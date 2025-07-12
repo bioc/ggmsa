@@ -62,7 +62,7 @@ ggSeqBundle <- function(msa,
                     )
 
     mapping <- aes(x = position_adj, y = y_adj, 
-                   fill = name, color = I(bundle_color))
+                   group = name, color = I(bundle_color))
     ggplot(data = dd, mapping = mapping) +
         geom_xspline(shape = spline_shape, linewidth = size, alpha = alpha) +
             theme_bundles(df = df, lev_molecule = lev_molecule)
